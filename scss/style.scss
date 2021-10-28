@@ -1,0 +1,125 @@
+$main-color: #c23616;
+$text-color: #fff;
+
+$secondery: #999;
+
+$margin-width: 100px;
+$base-width: 50px;
+
+body{
+    padding: 0;
+    margin: 0;
+}
+
+.main {
+    background-color: $main-color;
+    padding: 10px 0 300px $margin-width;
+    margin: 0;
+    color: $text-color;
+}
+
+.content {
+    position: absolute;
+    background-color: $text-color;
+    margin: 0 $margin-width;
+    padding: $base-width*2 $base-width*5;
+    top: 230px;
+    box-shadow: 0 0 50px -10px #000;
+
+    h3{
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: bold;
+        color: $secondery;
+        padding: 0 0 $base-width*2 0;
+
+        &::after {
+            content: '';
+            position: absolute;
+            border: 1px solid $secondery;
+            width: 60px;
+            top: 160px;
+            height: 1px;
+            // text-align: center;
+            left: 50%;
+            transform: translate(-50%);
+            background-color: $secondery;
+            // height: 10px;
+        }
+    }
+
+    .article {
+        display: flex;
+        div{
+            padding: 0 $base-width;
+        }
+        .col1{
+            h1{
+                color: $main-color;
+                font-size: 40px;
+            }
+            h4{
+                color: $secondery;
+            }
+
+            &::before{
+                content: '';
+                position: absolute;
+                height: 60%;
+                width: 3px;
+                background-color: $secondery;
+                top: 310px;
+                left: 380px;
+                transform: translate(-50%);
+            }
+            &::after{
+                content: '';
+                position: absolute;
+                height: 15px;
+                width: 15px;
+                border-radius: 50%;
+                background-color: $main-color;
+                top: 310px;
+                left: 380px;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        .col2{
+            h1{
+                font-weight: 400;
+                text-transform: uppercase;
+            }
+            h5{
+                color: $secondery;
+                text-transform: uppercase;
+                padding-bottom: $base-width;
+            }
+
+            p{
+                line-height: 28px;
+            }
+
+            .buttons{
+                padding: 30px 0;
+                // background-color: black;
+
+                button {
+                    margin: 0;
+                    border: 2px solid $main-color;
+                    padding: $base-width/4 $base-width/2;
+                    margin-right: 30px;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    background-color: $text-color;
+                    color: $main-color;
+
+                    &:first-child{
+                        background-color: $main-color;
+                        color: $text-color;
+                    }
+                }
+            }
+        }
+    }
+}
